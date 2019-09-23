@@ -1,0 +1,23 @@
+---
+title: "Exploring Gapminder"
+output: 
+  ioslides_presentation
+---
+
+## Examining the dataset
+
+```{r load, warning=FALSE, echo=FALSE, message=FALSE}
+library(gapminder)
+library(tibble)
+library(DT)
+
+gapminder
+```
+
+## Structure of the dataset
+
+```{r, warning=FALSE, echo=FALSE, message=FALSE, fig.height=4}
+tibble::as_tibble(mtcars)
+str(mtcars)
+```
+
