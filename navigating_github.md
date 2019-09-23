@@ -18,5 +18,5 @@ https://github.com/STAT545-UBC/Classroom/tree/dbd0d59d41bb7827d0e5f364768648bb1b
 The homework was due on 9/18/2018 by 23:59pm.
 
 
-5) Comment:
+5) Markdown features:
 I'm feeling **excited** when I am *finally* using github and being able to collaborate with everyone else. I'm a newbie! \*hiccup\*
