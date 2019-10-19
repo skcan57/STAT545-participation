@@ -1,0 +1,79 @@
+---
+title: "cm011"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r}
+library("tidyverse")
+library("gapminder")
+library("tidyverse")
+library("tidyr")
+library("dplyr")
+```
+
+# file export/import
+```{r}
+write_csv(gapminder, './gapminder.csv') # '.' means current directory
+View(gapminder)
+
+gapminder_sum <- gapminder %>%
+  group_by(continent) %>%
+  summarize(ave_lifeExp = mean(lifeExp))
+
+View(gapminder_sum)
+write_csv(gapminder_sum, './gapminder_sum.csv')
+
+gapminder_csv <- read_csv('./gapminder_sum.csv') 
+View(gapminder_csv)
+ls()
+
+#detach all the variables attached
+list=ls()
+remove(list=ls())
+ls()
+
+```
+
+#here::here()
+```{r}
+install.packages("here")
+library("here")
+
+gapminder_sum <- gapminder %>%
+  group_by(continent) %>%
+  summarize(ave_lifeExp = mean(lifeExp))
+write_csv(gapminder_sum, here::here("gapminder_sum.csv"))
+
+library("here")
+data_url <- "http://gattonweb.uky.edu/sheather/book/docs/datasets/GreatestGivers.xls"
+
+download.file(url = data_url,
+              destfile = here::here("test", "GreatestGivers.xls"))
+
+
+```
+
+# readxl: importing excel file
+```{r}
+install.packages("readxl")
+library(readxl)
+philanthropists <- read_excel(here::here("test","Greatestgivers.xls"), trim_ws = TRUE)
+View(philanthropists)
+library("here")
+
+mri_file = here("test","Firas-MRI.xlsx")
+mri <- read_excel(mri_file, range = "A1:L12")
+mri
+View(mri)
+mri<-mri[,-10]
+View(mri)
+mri <- mri %>%
+  pivot_longer(cols = 'Slice 1':'Slice 8',
+               names_to = 'slice_no',
+               values_to = 'value')
+View(mri)
+```
+
+
