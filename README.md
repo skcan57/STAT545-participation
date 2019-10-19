@@ -5,7 +5,7 @@ Please find the files for each of my class activities in either the folders abov
 - cm001: https://github.com/skcan57/STAT545-participation/tree/master/cm001
 - cm002: https://github.com/skcan57/STAT545-participation/tree/master/cm002
 - cm003: https://github.com/skcan57/STAT545-participation/tree/master/cm003
-- cm004: https://github.com/skcan57/STAT545-participation/tree/master/cm004
+- cm004: nothing to submit
 - cm005: https://github.com/skcan57/STAT545-participation/tree/master/cm005
 - cm006: https://github.com/skcan57/STAT545-participation/tree/master/cm006
 - cm007: https://github.com/skcan57/STAT545-participation/tree/master/cm007
